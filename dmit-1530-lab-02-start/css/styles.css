@@ -17,6 +17,15 @@ box-shadow: 2px 2px 5px #b0bec5;
 
 /* Universal Styles */
 
+:root {
+    --Dark-Blue-Grey: #263238;
+    --Off-White: #eceff1;
+    --Anchor-Tags: #00acc1;
+
+    --border: 1px solid #b0bec5;
+    --box-shadow: 2px 2px 5px #b0bec5;
+}
+
 body {
     color: #263238;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -28,9 +37,40 @@ h1 {
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.2;
+    text-align: center;
+    margin-top: 3rem;
 }
 
 /* Main Content */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.flex-container p {
+    margin-bottom: 1rem;
+}
+
+article {
+    justify-content: center;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    margin: 1rem;
+    max-width: 40%;
+}
+
+.card-copy {
+    padding: 2rem;
+    justify-content: center;
+}
+
+article:first-child {
+    max-width: 85%;
+}
+
 
 /* Footer */
 
@@ -39,4 +79,84 @@ footer * {
     text-align: center;
 }
 
+footer section {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
 /* Media Queries */
+
+@media screen and (min-width:720px) {
+
+    article {
+        justify-content: center;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        margin: 1rem;
+        max-width: 28%;
+    }
+
+    article:nth-child(2) {
+        max-width: 44%;
+    }
+
+    article:nth-child(3) {
+        max-width: 44%;
+    }
+
+    article:first-child {
+        display: flex;
+        flex-direction: row;
+        max-width: 93%;
+        margin: .5rem;
+    }
+
+    article:first-child>img {
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (min-width:900px) {
+
+    article:first-child {
+        display: flex;
+        flex-direction: row;
+        max-width: 98%;
+        margin: .5rem;
+    }
+
+    article:first-child>img {
+        max-width: 50%;
+    }
+
+    article:first-child .card-copy {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    article:nth-child(2) {
+        max-width: 23%;
+    }
+
+    article:nth-child(3) {
+        max-width: 23%;
+    }
+
+    article {
+        justify-content: center;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        margin: .5rem;
+        max-width: 23%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    body {
+        margin: 7rem;
+    }
+}
