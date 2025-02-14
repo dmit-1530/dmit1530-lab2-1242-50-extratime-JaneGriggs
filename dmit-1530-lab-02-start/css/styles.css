@@ -155,8 +155,6 @@ footer section {
 
 }
 
-@media screen and (min-width:1200px) {
-    body {
-        margin: 7rem;
-    }
-}
+
+/*The largest screen shot media was not required in the instructions 
+     When I enlarge the screen ot over 1200 the image looks the same as the largest screenshot*/
